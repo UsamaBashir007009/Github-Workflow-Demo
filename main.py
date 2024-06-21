@@ -7,4 +7,3 @@ def get_name():
 
 name = get_name()
 print_statement(name)
-    

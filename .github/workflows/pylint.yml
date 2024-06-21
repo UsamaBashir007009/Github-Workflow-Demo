@@ -1,7 +1,6 @@
 name: Pylint
 
-on: [push, pull_request]
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   py-lint:
@@ -13,3 +12,10 @@ jobs:
 
     - name: linting
       uses: programmingwithalex/pylinter@main
+      with:
+        python-root: '.'
+        flake8-flags: '--count --show-source --statistics'
+        mypy-flags: '--ignore-missing-imports'
+        fail-on-isort: true
+        skip-mypy: true
+        mypy-ignore-dirs-files: 'folder1 folder2/main.py'

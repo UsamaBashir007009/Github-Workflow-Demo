@@ -1,6 +1,9 @@
 name: Pylint
 
-on: [pull_request, workflow_dispatch]
+on:
+  pull_request:
+    branches:
+    - main
 
 jobs:
   py-lint:

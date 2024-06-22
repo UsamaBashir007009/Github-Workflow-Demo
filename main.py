@@ -5,6 +5,5 @@ def print_statement(text):
 def get_name():
     return "Usama Bashir"
 
-
 name = get_name()
 print_statement(name)
